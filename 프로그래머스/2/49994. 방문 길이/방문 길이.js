@@ -55,8 +55,8 @@ function solution(dirs) {
     }
     
     var answer = 0;
-    const mapArr = Array.from({length : 11}, ()=> new Array(11).fill(0))
-    mapArr[now.x][now.y] = 1
+    // const mapArr = Array.from({length : 11}, ()=> new Array(11).fill(0))
+//     mapArr[now.x][now.y] = 1
     
     const set = new Set()
     
@@ -81,7 +81,7 @@ function solution(dirs) {
         set.add(npStr)
         console.log(npStr)
        
-        mapArr[prevX][prevY] = i
+        // mapArr[prevX][prevY] = i
         
     }
     
