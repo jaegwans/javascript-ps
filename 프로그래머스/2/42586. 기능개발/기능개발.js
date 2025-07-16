@@ -21,16 +21,16 @@ class Queue{
 
 function solution(progresses, speeds) {
     var answer= [];
-    const q = [...progresses];
+    const q = [...progresses]; // 일반배열 큐에 작업배열 삽입
     
-    while(q.length !==0){
-        for(let i=0;i<speeds.length;i++){//한바퀴 돌림
+    while(q.length !==0){ // 하루 지남
+        for(let i=0;i<speeds.length;i++){ // 진행도 + 진행률
            q[i] = q[i]+speeds[i];
         }
         
         let count = 0
-        while(q.length !== 0){//한바퀴 돌림
-            if(q[0]>=100){
+        while(q.length !== 0){ // 큐 순회
+            if(q[0]>=100){ // 큐가 100 도달 시
                 count++
                 q.shift()
                 speeds.shift()
